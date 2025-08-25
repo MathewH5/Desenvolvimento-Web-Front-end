@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedra • Papel • Tesoura</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <header class="card__header">
+        <h1 class="title">Jogo Pedra‑Papel‑Tesoura</h1>
+        <p class="subtitle">Digite <strong>pedra</strong>, <strong>papel</strong> ou <strong>tesoura</strong>.</p>
+      </header>
+
+      <div class="form">
+        <label class="field">
+          <span>Digite a jogada do jogador 1 :</span>
+          <input id="jogador1" type="text" placeholder="Ex.: pedra" autocomplete="off" />
+        </label>
+
+        <label class="field">
+          <span>Digite a jogada do jogador 2 :</span>
+          <input id="jogador2" type="text" placeholder="Ex.: tesoura" autocomplete="off" />
+        </label>
+
+        <div class="result">
+          <span class="result__label">Vencedor :</span>
+          <span id="resultado" class="result__value">—</span>
+        </div>
+
+        <div class="actions">
+          <button id="btnChecar" class="btn btn--primary">checar vencedor</button>
+          <button id="btnLimpar" class="btn btn--ghost">limpar jogo</button>
+        </div>
+
+        <p class="hint">Dica: use apenas <code>pedra</code>, <code>papel</code> ou <code>tesoura</code>. Qualquer outra entrada encerra o jogo.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Feito por Mathew em HTML, CSS e JavaScript.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
