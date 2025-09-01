@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validação dos dígitos verificadores do CPF</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Validação dos dígitos verificadores do CPF</h1>
+
+    <label for="cpf">número do CPF</label>
+    <input
+      id="cpf"
+      name="cpf"
+      type="text"
+      inputmode="numeric"
+      maxlength="11"
+      placeholder="Digite 11 dígitos (somente números)"
+      autocomplete="off"
+    />
+
+    <button id="verifyBtn">Verificar CPF</button>
+
+    <p id="feedback" aria-live="polite"></p>
+
+    <details class="obs">
+      <summary>Instruções do exercício</summary>
+      <ul>
+        <li>A entrada deve conter exatamente <strong>11 dígitos</strong>.</li>
+        <li>Todos os 11 caracteres devem ser <strong>dígitos (0–9)</strong>.</li>
+        <li>Se for inválido, exibir: <em>“CPF inválido, digite 11 dígitos”</em>.</li>
+        <li>Regra do exercício (Módulo 11):
+          <ol>
+            <li>1º DV: somar os 9 primeiros dígitos × pesos de <strong>1 a 9</strong>; o DV é <code>soma % 11</code> (se der 10, usar 0).</li>
+            <li>2º DV: somar os 10 primeiros dígitos (inclui o 1º DV) × pesos de <strong>0 a 9</strong>; o DV é <code>soma % 11</code> (se der 10, usar 0).</li>
+          </ol>
+        </li>
+      </ul>
+    </details>
+  </main>
+
+  <script src="exercicio1_3.js"></script>
+</body>
+</html>
