@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Controle de contas do hotel</title>
+  <style>
+    body{font:16px/1.4 system-ui;margin:24px}
+    .row{margin:10px 0}
+    input, select, button{padding:8px}
+    input[readonly]{background:#f3f4f6}
+  </style>
 </head>
 <body>
-    <h1>Controle de contas do hotel</h1>
+  <h1>Controle de contas do hotel</h1>
 
-    <label for="Nome">Nome do hospede:</label>
-    <input type="text" name="name" id="name">
-    <br><br><br><br><br>
-    
-    <label for="entrada">Dia da entrada:</label>
-    <input type="text" name="entrada" id="entrada">
-    <br><br><br><br><br>
+  <div class="row">
+    <label for="name">Nome do hóspede:</label>
+    <input type="text" id="name" name="name" placeholder="Ex.: Maria Silva" />
+  </div>
 
-    
-    <label for="saida">Dia da saida:</label>
-    <input type="text" name="saida" id="saida">
-    <br><br><br><br><br>
+  <div class="row">
+    <label for="entrada">Dia de entrada:</label>
+    <input type="number" id="entrada" name="entrada" min="1" max="31" placeholder="1–31" />
+  </div>
 
-    <label for="quarto">tipo de quarto:</label>
-    <select name="" id="">
-        <option value="STANDARD">STANDARD</option>
-        <option value="LUXO">LUXO</option>
-        <option value="SUPER-LUXO">SUPER-LUXO</option>
+  <div class="row">
+    <label for="saida">Dia de saída:</label>
+    <input type="number" id="saida" name="saida" min="2" max="31" placeholder="1–31" />
+  </div>
+
+  <div class="row">
+    <label for="tipo">Tipo de quarto:</label>
+    <select id="tipo" name="tipo">
+      <option value="STANDARD">STANDARD</option>
+      <option value="LUXO">LUXO</option>
+      <option value="SUPER-LUXO">SUPER-LUXO</option>
     </select>
-    <br><br><br><br><br>
+  </div>
 
+  <div class="row">
     <label for="cidade">Nome da cidade:</label>
-    <input type="text" name="cidade" id="cidade">
+    <input type="text" id="cidade" name="cidade" placeholder="Ex.: Belo Horizonte" />
+  </div>
 
+  <div class="row">
+    <label for="valor">Valor da conta:</label>
+    <input type="text" id="valor" name="valor" readonly placeholder="R$ 0,00" />
+  </div>
 
-    <br><br><br><br><br>
-    <label for="cidade">valor da conta:</label>
-<br><br>
-    <button onclick="calcular()">Calcular</button>
-    <button onclick="novo()">Novo</button>
-    <button onclick="RelatorioContasAcimaMedia()">Relatorio contas acima Média</button>
+  <div class="row">
+    <button type="button" onclick="calcular()">Calcular</button>
+    <button type="button" onclick="novo()">Novo</button>
+    <button type="button" onclick="RelatorioContasAcimaMedia()">Relatório contas acima da média</button>
+  </div>
 
-    <br><br><br><br><br>
+  <hr>
 
-    <label for="cidade">NOME ------------- VALOR DA CONTA</label>
-    <br><br>
-    <ul id="listaEmpregados"></ul>
+  <div class="row">
+    <strong>NOME — VALOR DA CONTA</strong>
+    <ul id="listaHospedes"></ul>
+  </div>
 
-    <script src="ex2_2.js"></script>
-
+  <script src="ex2_2.js"></script>
 </body>
 </html>
