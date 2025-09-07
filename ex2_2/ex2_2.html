@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Controle de contas do hotel</h1>
+
+    <label for="Nome">Nome do hospede:</label>
+    <input type="text" name="name" id="name">
+    <br><br><br><br><br>
+    
+    <label for="entrada">Dia da entrada:</label>
+    <input type="text" name="entrada" id="entrada">
+    <br><br><br><br><br>
+
+    
+    <label for="saida">Dia da saida:</label>
+    <input type="text" name="saida" id="saida">
+    <br><br><br><br><br>
+
+    <label for="quarto">tipo de quarto:</label>
+    <select name="" id="">
+        <option value="STANDARD">STANDARD</option>
+        <option value="LUXO">LUXO</option>
+        <option value="SUPER-LUXO">SUPER-LUXO</option>
+    </select>
+    <br><br><br><br><br>
+
+    <label for="cidade">Nome da cidade:</label>
+    <input type="text" name="cidade" id="cidade">
+
+
+    <br><br><br><br><br>
+    <label for="cidade">valor da conta:</label>
+<br><br>
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="novo()">Novo</button>
+    <button onclick="RelatorioContasAcimaMedia()">Relatorio contas acima Média</button>
+
+    <br><br><br><br><br>
+
+    <label for="cidade">NOME ------------- VALOR DA CONTA</label>
+    <br><br>
+    <ul id="listaEmpregados"></ul>
+
+    <script src="ex2_2.js"></script>
+
+</body>
+</html>
