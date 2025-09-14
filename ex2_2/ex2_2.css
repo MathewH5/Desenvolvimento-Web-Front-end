@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 150px;   /* deixa os labels alinhados */
+  margin-bottom: 10px;
+}
+
+input, select {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+ul {
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
